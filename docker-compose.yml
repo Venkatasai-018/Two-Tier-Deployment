@@ -4,7 +4,7 @@ services:
     image: karthikcodes/flaskapp:latest
     ports: 
       - "5000:5000"
-    enviornment:
+    environment:
       MYSQL_HOST: "mysql"
       MYSQL_USER: "admin"
       MYSQL_PASSWORD: "admin"
@@ -15,7 +15,7 @@ services:
 
   mysql:
     image: mysql:5.7
-    enviornment:
+    environment:
       MYSQL_HOST: "mysql"
       MYSQL_USER: "admin"
       MYSQL_PASSWORD: "admin"
