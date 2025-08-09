@@ -37,3 +37,14 @@ COPY . .
 
 CMD ["python","app.py"]
 
+
+
+# steps for the docker deployment 
+
+1] create docker image using Dockerfile
+2] create mysql docker (docker run -d -p 3306:3306 --name MySQL -e ROOT_USER_PASSWORD="admin" MySQL:5.7)
+3] create a network for these two (docker network create 2-tier)
+4] run the containers in same n/w 
+
+
+
