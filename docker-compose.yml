@@ -7,14 +7,14 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: myDb
+      MYSQL_DATABASE: devops
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     volumes:
       - ./mysql-data:/var/lib/mysql
       - ./message.sql:/docker-entrypoint-initdb.d/message.sql  
     networks:
-      - 2-tier
+      - twotier
     
 
   flask-app:
@@ -30,7 +30,7 @@ services:
     depends_on:
       - mysql
     networks:
-      - 2-tier
+      - twotier
     restart: always
     
 
