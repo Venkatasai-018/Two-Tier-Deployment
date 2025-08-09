@@ -9,6 +9,8 @@ services:
       MYSQL_USER: "admin"
       MYSQL_PASSWORD: "admin"
       MYSQL_DB: "myDb"
+    network:
+      - 2-tier
     depends_on:
       - mysql
 
@@ -25,5 +27,7 @@ services:
     volumes:
       - ./message.sql:/docker-entrypoint-initdb.d/message.sql
       - mysql-data:/var/lib/mysql
+    network:
+      - 2-tier
 volumes:
   mysql-data: null
