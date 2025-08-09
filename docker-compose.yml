@@ -18,7 +18,7 @@ services:
     
 
   flask-app:
-    image: karthikcodes/flask-app:latest
+    image: karthikcodes/flaskapp:latest
     container_name: flask-app
     ports:
       - "5000:5000"
